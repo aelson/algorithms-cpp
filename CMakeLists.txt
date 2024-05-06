@@ -3,4 +3,8 @@ project(untitled)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(untitled main.cpp)
+add_executable(untitled
+        src/tech/aelson/algorithms/model/Product.cpp
+        src/tech/aelson/algorithms/search/SearchSmallest.cpp
+        src/tech/aelson/algorithms/search/TestSmallestPrice.cpp
+)
