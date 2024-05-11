@@ -1,6 +1,6 @@
 #include "search/SearchSmallestTester.h"
-#include "sort/SelectionSortTester.h"
-#include "sort/InsertionSortTester.h"
+#include "sort/selection_sort/SelectionSortTester.h"
+#include "sort/insertion_sort/InsertionSortTester.h"
 
 int main() {
     testSearchSmallest();
