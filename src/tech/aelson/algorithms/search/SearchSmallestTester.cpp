@@ -1,7 +1,6 @@
 #include "SearchSmallestTester.h"
 #include <iostream>
 #include "SearchSmallest.cpp"
-#include "../model/Product.cpp"
 
 int testSearchSmallest() {
     Product products[] = {

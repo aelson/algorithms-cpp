@@ -12,4 +12,7 @@ add_executable(untitled
         src/tech/aelson/algorithms/Main.cpp
         src/tech/aelson/algorithms/search/SearchSmallestTester.h
         src/tech/aelson/algorithms/sort/SelectionSortTester.h
+        src/tech/aelson/algorithms/sort/InsertionSort.cpp
+        src/tech/aelson/algorithms/sort/InsertionSortTester.cpp
+        src/tech/aelson/algorithms/sort/InsertionSortTester.h
 )

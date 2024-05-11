@@ -1,7 +1,7 @@
-#include "SelectionSortTester.h"
-#include "SelectionSort.cpp"
+#include "InsertionSortTester.h"
+#include "InsertionSort.cpp"
 
-void testSelectionSort() {
+void testInsertionSort() {
     Product products[] = {
             Product("Ford Escape", 30000),
             Product("Toyota Corolla", 20000),
@@ -14,7 +14,7 @@ void testSelectionSort() {
         std::cout << product.getName() << " costs " << product.getPrice() << std::endl;
     }
 
-    tech::aelson::algorithms::sort::SelectionSort::execute(products, 5);
+    tech::aelson::algorithms::sort::InsertionSort::execute(products, 5);
     std::cout << "Sorted array: " << std::endl;
     for (const auto& product : products) {
         std::cout << product.getName() << " costs " << product.getPrice() << std::endl;
