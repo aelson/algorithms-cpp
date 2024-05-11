@@ -11,7 +11,7 @@ int testFindSmallest() {
             Product("Audi Q5", 45000)
     };
     using namespace tech::aelson::algorithms::search;
-    int smallest = SearchSmallest::execute(products, 0, 4);
+    int smallest = FindSmallest::execute(products, 0, 4);
     std::cout << smallest << std::endl;
     std::cout << "The car " << products[smallest].getName() << " costs " << products[smallest].getPrice() << std::endl;
 

@@ -5,7 +5,7 @@ namespace tech {
         namespace algorithms {
             namespace search {
 
-                class SearchSmallest {
+                class FindSmallest {
                 public:
                     static int execute(Product* products, int start, int end) {
                         int smallest = start;

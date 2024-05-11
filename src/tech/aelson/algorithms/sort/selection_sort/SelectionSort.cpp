@@ -12,7 +12,7 @@ namespace tech {
                         for (int current = 0; current < numberOfElements - 1; current++) {
                             std::cout << "I am in the element " << current << std::endl;
 
-                            int smallest = tech::aelson::algorithms::search::SearchSmallest::execute(products, current, numberOfElements - 1);
+                            int smallest = tech::aelson::algorithms::search::FindSmallest::execute(products, current, numberOfElements - 1);
 
                             std::cout << "<-> Swapping element " << current << " with element " << smallest << std::endl;
 
