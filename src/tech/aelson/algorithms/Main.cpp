@@ -8,6 +8,6 @@ int main() {
 //    testSearchSmallest();
 //    testSelectionSort();
 //    testInsertionSort();
-//    testMergeSortOneArray();
+    testMergeSortOneArray();
     testMergeSortOneArray();
 }

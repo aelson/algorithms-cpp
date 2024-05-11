@@ -18,7 +18,9 @@ void testMergeSortOneArray() {
         std::cout << grade.getStudentName() << " " << grade.getResult() << std::endl;
     }
 
-    Grade* rank = tech::aelson::algorithms::sort::MergeSort::sortOneArray(grades, 0, 4, sizeof(grades) / sizeof(grades[0]));
+    Grade* rank = tech::aelson::algorithms::sort::MergeSort::sortOneArrayWithTwoOrderedHalfs(grades, 0, 4,
+                                                                                             sizeof(grades) /
+                                                                                             sizeof(grades[0]));
     std::cout << "Sorted array: " << std::endl;
     for (int i = 0; i < 9; ++i) {
         std::cout << rank[i].getStudentName() << " " << rank[i].getResult() << std::endl;

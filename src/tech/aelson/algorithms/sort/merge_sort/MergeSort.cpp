@@ -8,6 +8,16 @@ namespace tech {
 
                 class MergeSort {
                 public:
+                    static void mergeSort(Grade* grades, int start, int end) {
+                        int numberOfElements = end - start;
+                        if (numberOfElements > 1) {
+                            int middle = (start + end) / 2;
+                            mergeSort(grades, start, middle);
+                            mergeSort(grades, middle, end);
+                            sortOneArrayWithTwoOrderedHalfs(grades, start, middle, end);
+                        }
+                    }
+
                     static Grade *
                     mergeTwoArrays(Grade *firstArray, int firstArrayLength, Grade *secondArray, int secondArrayLength) {
                         int total = firstArrayLength + secondArrayLength;
@@ -58,7 +68,7 @@ namespace tech {
                         return merged;
                     }
 
-                    static Grade* sortOneArray(Grade* array, int start, int middle, int end) {
+                    static Grade* sortOneArrayWithTwoOrderedHalfs(Grade* array, int start, int middle, int end) {
                         int total = end - start;
                         Grade* sorted = new Grade[total];
                         int sortedIndex = 0;
@@ -94,12 +104,11 @@ namespace tech {
                             secondPartIndex++;
                             sortedIndex++;
                         }
-                        if (start > 0) {
-                            std::cout << "Rebuilding the original array keeping the initial object(s) not ordered (because the start is greater than 0)" << std::endl;
-                            for (int indexOfMerged = 0; indexOfMerged < sortedIndex; indexOfMerged++) {
-                                std::cout << "-> Inserting " << sorted[indexOfMerged].getStudentName() << " (" << sorted[indexOfMerged].getResult() << ") on the position " << indexOfMerged << std::endl;
-                                array[start + indexOfMerged] = sorted[indexOfMerged];
-                            }
+
+                        std::cout << "Rebuilding the original array keeping the initial object(s) not ordered (because the start is greater than 0)" << std::endl;
+                        for (int indexOfMerged = 0; indexOfMerged < sortedIndex; indexOfMerged++) {
+                            std::cout << "-> Inserting " << sorted[indexOfMerged].getStudentName() << " (" << sorted[indexOfMerged].getResult() << ") on the position " << indexOfMerged << std::endl;
+                            array[start + indexOfMerged] = sorted[indexOfMerged];
                         }
                         return array;
                     }
