@@ -9,7 +9,7 @@ namespace tech {
                 class MergeSort {
                 public:
                     static Grade *
-                    execute(Grade *firstArray, int firstArrayLength, Grade *secondArray, int secondArrayLength) {
+                    mergeTwoArrays(Grade *firstArray, int firstArrayLength, Grade *secondArray, int secondArrayLength) {
                         int total = firstArrayLength + secondArrayLength;
                         Grade *merged = new Grade[total];
                         int currentOfFirstArray = 0;
@@ -56,6 +56,52 @@ namespace tech {
                             currentOfMerged++;
                         }
                         return merged;
+                    }
+
+                    static Grade* sortOneArray(Grade* array, int start, int middle, int end) {
+                        int total = end - start;
+                        Grade* sorted = new Grade[total];
+                        int sortedIndex = 0;
+                        int firstPartIndex = start;
+                        int secondPartIndex = middle;
+                        while (firstPartIndex < middle && secondPartIndex < end) {
+                            std::cout << "Comparing " << array[firstPartIndex].getStudentName() << " (" << array[firstPartIndex].getResult() << ") with "
+                                      << array[secondPartIndex].getStudentName() << " (" << array[secondPartIndex].getResult() << ")" << std::endl;
+
+                            if (array[firstPartIndex].getResult() < array[secondPartIndex].getResult()) {
+                                std::cout << "-> Inserting " << array[firstPartIndex].getStudentName() << " (" << array[firstPartIndex].getResult() << ") on the position " << sortedIndex << std::endl;
+                                sorted[sortedIndex] = array[firstPartIndex];
+                                firstPartIndex++;
+                            } else {
+                                std::cout << "-> Inserting " << array[secondPartIndex].getStudentName() << " (" << array[secondPartIndex].getResult() << ") on the position " << sortedIndex << std::endl;
+                                sorted[sortedIndex] = array[secondPartIndex];
+                                secondPartIndex++;
+                            }
+                            std::cout << "------------------------------------" << std::endl;
+                            sortedIndex++;
+                        }
+                        while (firstPartIndex < middle) {
+                            std::cout << "-> Inserting " << array[firstPartIndex].getStudentName() << " (" << array[firstPartIndex].getResult() << ") on the position " << sortedIndex
+                                      << " because it is left over from the first part of the array" << std::endl;
+                            sorted[sortedIndex] = array[firstPartIndex];
+                            firstPartIndex++;
+                            sortedIndex++;
+                        }
+                        while (secondPartIndex < end) {
+                            std::cout << "-> Inserting " << array[secondPartIndex].getStudentName() << " (" << array[secondPartIndex].getResult() << ") on the position " << sortedIndex
+                                      << " because it is left over from the second part of the array" << std::endl;
+                            sorted[sortedIndex] = array[secondPartIndex];
+                            secondPartIndex++;
+                            sortedIndex++;
+                        }
+                        if (start > 0) {
+                            std::cout << "Rebuilding the original array keeping the initial object(s) not ordered (because the start is greater than 0)" << std::endl;
+                            for (int indexOfMerged = 0; indexOfMerged < sortedIndex; indexOfMerged++) {
+                                std::cout << "-> Inserting " << sorted[indexOfMerged].getStudentName() << " (" << sorted[indexOfMerged].getResult() << ") on the position " << indexOfMerged << std::endl;
+                                array[start + indexOfMerged] = sorted[indexOfMerged];
+                            }
+                        }
+                        return array;
                     }
                 };
 

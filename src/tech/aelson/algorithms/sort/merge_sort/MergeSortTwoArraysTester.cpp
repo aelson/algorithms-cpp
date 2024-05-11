@@ -1,8 +1,8 @@
-#include "MergeSortTester.h"
+#include "MergeSortTwoArraysTester.h"
 #include "MergeSort.cpp"
 #include <iostream>
 
-void testMergeSort() {
+void testMergeSortTwoArrays() {
     Grade firstArray[] = {
             Grade("andre", 4),
             Grade("mariana", 5),
@@ -27,9 +27,12 @@ void testMergeSort() {
         std::cout << grade.getStudentName() << " " << grade.getResult() << std::endl;
     }
 
-    Grade* rank =  tech::aelson::algorithms::sort::MergeSort::execute(firstArray, sizeof(firstArray) / sizeof(firstArray[0]), secondArray, sizeof(secondArray) / sizeof(secondArray[0]));
+    Grade* rank = tech::aelson::algorithms::sort::MergeSort::mergeTwoArrays(firstArray,
+                                                                            sizeof(firstArray) / sizeof(firstArray[0]),
+                                                                            secondArray, sizeof(secondArray) /
+                                                                                         sizeof(secondArray[0]));
     std::cout << "Merged array: " << std::endl;
-    for (int i = 0; i < (sizeof(firstArray) / sizeof(firstArray[0])) + (sizeof(secondArray) / sizeof(secondArray[0])); ++i) {
+    for (int i = 0; i < 9; ++i) {
         std::cout << rank[i].getStudentName() << " " << rank[i].getResult() << std::endl;
     }
 }
