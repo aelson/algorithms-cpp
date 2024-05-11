@@ -21,4 +21,7 @@ add_executable(untitled
         src/tech/aelson/algorithms/sort/merge_sort/MergeSortTwoArraysTester.h
         src/tech/aelson/algorithms/sort/merge_sort/MergeSortOneArrayTester.cpp
         src/tech/aelson/algorithms/sort/merge_sort/MergeSortOneArrayTester.h
+        src/tech/aelson/algorithms/search/find_smaller_elements/FindSmallerElements.cpp
+        src/tech/aelson/algorithms/search/find_smaller_elements/FindSmallerElementsTester.cpp
+        src/tech/aelson/algorithms/search/find_smaller_elements/FindSmallerElementsTester.h
 )
