@@ -26,4 +26,7 @@ add_executable(untitled
         src/tech/aelson/algorithms/search/find_smaller_elements/FindSmallerElementsTester.h
         src/tech/aelson/algorithms/search/pivot/PivotTester.cpp
         src/tech/aelson/algorithms/search/pivot/PivotTester.h
+        src/tech/aelson/algorithms/sort/quick_sort/QuickSort.cpp
+        src/tech/aelson/algorithms/sort/quick_sort/QuickSortTester.cpp
+        src/tech/aelson/algorithms/sort/quick_sort/QuickSortTester.h
 )

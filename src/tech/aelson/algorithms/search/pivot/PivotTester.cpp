@@ -16,7 +16,7 @@ int testPivot() {
             guilherme,
     };
 
-    int pivotPosition = tech::aelson::algorithms::search::Pivot::execute(unsortedGrades, 0, sizeof(unsortedGrades) / sizeof(unsortedGrades[0]));
+    int pivotPosition = tech::aelson::algorithms::search::Pivot::execute(unsortedGrades, 9);
     std::cout << "The Pivot is in the position " << pivotPosition << std::endl;
     for (const auto& grade : unsortedGrades) {
         std::cout << grade.getStudentName() << " " << grade.getResult() << std::endl;

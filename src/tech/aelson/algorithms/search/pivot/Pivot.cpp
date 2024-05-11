@@ -7,17 +7,21 @@ namespace tech {
 
                 class Pivot {
                 public:
-                    static int execute(Grade* grades, int start, int end) {
+                    static int execute(Grade* grades, int end) {
                         Grade pivot = grades[end - 1];
                         int lowerValuesCount = 0;
-                        for (int index = start; index < end - 1; index++) {
+                        for (int index = 0; index < end - 1; index++) {
                             Grade current = grades[index];
-                            if (current.getResult() <= pivot.getResult()) {
-                                swap(grades, index, lowerValuesCount);
+                            if (current.getResult() < pivot.getResult()) {
+                                if (index != lowerValuesCount) {
+                                    swap(grades, index, lowerValuesCount);
+                                }
                                 lowerValuesCount++;
                             }
                         }
-                        swap(grades, end - 1, lowerValuesCount);
+                        if (end - 1 != lowerValuesCount) {
+                            swap(grades, end - 1, lowerValuesCount);
+                        }
                         return lowerValuesCount;
                     }
 

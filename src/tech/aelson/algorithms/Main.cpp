@@ -5,13 +5,15 @@
 #include "sort/insertion_sort/InsertionSortTester.h"
 #include "sort/merge_sort/MergeSortOneArrayTester.h"
 #include "sort/merge_sort/MergeSortTwoArraysTester.h"
+#include "sort/quick_sort/QuickSortTester.h"
 
 int main() {
-//    testFindSmallest();
-//    testFindSmallerElements();
+    testFindSmallest();
+    testFindSmallerElements();
     testPivot();
-//    testSelectionSort();
-//    testInsertionSort();
-//    testMergeSortOneArray();
-//    testMergeSortOneArray();
+    testSelectionSort();
+    testInsertionSort();
+    testMergeSortOneArray();
+    testMergeSortOneArray();
+    testQuickSort();
 }
