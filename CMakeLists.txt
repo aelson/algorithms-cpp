@@ -7,9 +7,9 @@ add_executable(untitled
         src/tech/aelson/algorithms/model/Product.cpp
         src/tech/aelson/algorithms/search/SearchSmallest.cpp
         src/tech/aelson/algorithms/search/SearchSmallestTester.cpp
-        src/tech/aelson/algorithms/search/SelectionSort.cpp
-        src/tech/aelson/algorithms/search/SelectionSortTester.cpp
+        src/tech/aelson/algorithms/sort/SelectionSort.cpp
+        src/tech/aelson/algorithms/sort/SelectionSortTester.cpp
         src/tech/aelson/algorithms/Main.cpp
         src/tech/aelson/algorithms/search/SearchSmallestTester.h
-        src/tech/aelson/algorithms/search/SelectionSortTester.h
+        src/tech/aelson/algorithms/sort/SelectionSortTester.h
 )

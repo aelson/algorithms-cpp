@@ -1,6 +1,6 @@
 #include "SelectionSortTester.h"
-#include <iostream>
 #include "SelectionSort.cpp"
+#include "../model/Product.cpp"
 
 int testSelectionSort() {
     Product products[] = {
@@ -16,7 +16,7 @@ int testSelectionSort() {
         std::cout << product.getName() << " costs " << product.getPrice() << std::endl;
     }
 
-    tech::aelson::algorithms::sort::SelectionSort::execute(products, sizeof(products) / sizeof(products[0]));
+    tech::aelson::algorithms::sort::SelectionSort::execute(products, 5);
 
     std::cout << "Sorted array: " << std::endl;
     for (const auto& product : products) {

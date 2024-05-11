@@ -1,5 +1,5 @@
 #include <iostream>
-#include "SearchSmallest.cpp"
+#include "../search/SearchSmallest.cpp"
 
 namespace tech {
     namespace aelson {

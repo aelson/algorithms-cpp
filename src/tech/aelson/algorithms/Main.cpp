@@ -1,5 +1,5 @@
 #include "search/SearchSmallestTester.h"
-#include "search/SelectionSortTester.h"
+#include "sort/SelectionSortTester.h"
 
 int main() {
     testSearchSmallest();
