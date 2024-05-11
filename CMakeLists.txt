@@ -24,4 +24,6 @@ add_executable(untitled
         src/tech/aelson/algorithms/search/find_smaller_elements/FindSmallerElements.cpp
         src/tech/aelson/algorithms/search/find_smaller_elements/FindSmallerElementsTester.cpp
         src/tech/aelson/algorithms/search/find_smaller_elements/FindSmallerElementsTester.h
+        src/tech/aelson/algorithms/search/pivot/PivotTester.cpp
+        src/tech/aelson/algorithms/search/pivot/PivotTester.h
 )
