@@ -1,8 +1,8 @@
-#include "SearchSmallestTester.h"
+#include "FindSmallestTester.h"
 #include <iostream>
-#include "SearchSmallest.cpp"
+#include "FindSmallest.cpp"
 
-int testSearchSmallest() {
+int testFindSmallest() {
     Product products[] = {
             Product("Tesla Model 3", 50000),
             Product("Toyota Corolla", 20000),

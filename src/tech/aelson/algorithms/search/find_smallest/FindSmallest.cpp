@@ -1,4 +1,4 @@
-#include "../model/Product.cpp"
+#include "../../model/Product.cpp"
 
 namespace tech {
     namespace aelson {
