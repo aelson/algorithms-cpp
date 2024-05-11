@@ -15,4 +15,8 @@ add_executable(untitled
         src/tech/aelson/algorithms/sort/insertion_sort/InsertionSort.cpp
         src/tech/aelson/algorithms/sort/insertion_sort/InsertionSortTester.cpp
         src/tech/aelson/algorithms/sort/insertion_sort/InsertionSortTester.h
+        src/tech/aelson/algorithms/model/Grade.cpp
+        src/tech/aelson/algorithms/sort/merge_sort/MergeSort.cpp
+        src/tech/aelson/algorithms/sort/merge_sort/MergeSortTester.cpp
+        src/tech/aelson/algorithms/sort/merge_sort/MergeSortTester.h
 )
