@@ -9,9 +9,9 @@ namespace tech {
                 public:
                     static int execute(Product* products, int start, int end) {
                         int smallest = start;
-                        for (int atual = start; atual <= end; atual++) {
-                            if (products[atual].getPrice() < products[smallest].getPrice()) {
-                                smallest = atual;
+                        for (int index = start; index <= end; index++) {
+                            if (products[index].getPrice() < products[smallest].getPrice()) {
+                                smallest = index;
                             }
                         }
                         return smallest;
